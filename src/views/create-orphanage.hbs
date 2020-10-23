@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt_BR">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -43,14 +43,14 @@
 
         <main class="animate-appear with-siderbar" >
 
-            <form action="">
+            <form action="save-orphanage" method="POST">
                 <fieldset>
                     <legend>Dados</legend>
 
                     <div class="map-container">
                         <div id="mapid"></div>
-                        <input type="hidden" name="lat">
-                        <input type="hidden" name="lng">
+                        <input type="hidden" name="lat" required>
+                        <input type="hidden" name="lng" required>
 
                         <footer>    
                             <a href="#" id="select-point">
@@ -80,7 +80,7 @@
 
 
                             <div class="new-upload">
-                                <input type="images" placeholder="cole o link da foto aqui" required>
+                                <input name="images" placeholder="cole o link da foto aqui" type="url" required>
                                 <span  onclick="deleteField(event)">
                                     <img src="/images/remove-file.svg" alt="">
                                 </span>
